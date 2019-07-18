@@ -1,0 +1,13 @@
+#reg
+{
+    text-align: justify;
+    align-content: center;
+    text-align: justify;
+    line-height: 40px;
+}
+#start{
+    color:white;
+    background-color:green;
+    size: 30px;
+    text-align: center;
+}
