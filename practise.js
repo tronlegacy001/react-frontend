@@ -6,7 +6,7 @@ class prac extends React.Component
 {
     constructor(props)
     {super(props);
-        this.state ={value1:'',value2:'',value3:'',value4:'',value5:'',value6:'',value7:'',value8:'',value9:'',value10:''};
+        this.state ={value1:'',value2:'',value3:'',value4:'',value5:'',value6:'',value7:'',value8:'',value9:'',value10:'',value11:'',value12:''};
         this.handleSubmit=this.handleSubmit.bind(this);
         this.handleChange=this.handleChange.bind(this);
        
@@ -17,6 +17,13 @@ class prac extends React.Component
         if (this.state.value1 === '' || this.state.value2 === ''|| this.state.value3 === ''|| this.state.value4 === ''|| this.state.value5 === ''|| this.state.value6 === ''|| this.state.value7 === ''|| this.state.value8 === '' ||this.state.value9 ==='')
         {alert('one of the details  is left blank');
         event.preventDefault();}
+        else if()
+        {
+
+        }
+        else{
+            alert('your form has been filled successfully');
+        }
     }
     handleChange(event) {
         if (event.target.name === "fname") {
@@ -25,7 +32,7 @@ class prac extends React.Component
         else if (event.target.name === "lname") {
             this.setState({ value2: event.target.value })
         }
-        else if (event.target.name === "do") {
+        else if (event.target.name === "dob") {
             this.setState({ value3: event.target.value })
         }
         else if (event.target.name === "phone") {
@@ -47,13 +54,13 @@ class prac extends React.Component
             this.setState({ value9: event.target.value })
         }
         else if (event.target.name === "Area") {
-            this.setState({ value9: event.target.value })
+            this.setState({ value10: event.target.value })
         }
         else if (event.target.name === "PO") {
-            this.setState({ value9: event.target.value })
+            this.setState({ value11: event.target.value })
         }
         else if (event.target.name === "pin") {
-            this.setState({ value9: event.target.value })
+            this.setState({ value12: event.target.value })
         }
     }
 
@@ -61,20 +68,21 @@ class prac extends React.Component
     {
         return(
             <div id='reg'>
-            <form>
+            <form onSubmit={this.handleSubmit} name='regform' method='POST'>
              First name<input type='text' value={this.state.value1} placeholder='Enter first name' name='fname' onChange={this.handleChange}/><br></br>
              Last name<input type='text' value={this.state.value2} placeholder='Enter last name' name='lname' onChange={this.handleChange}/><br></br>
              Date of Birth<input type='date'value={this.state.value3} name='dob' onChange={this.handleChange}/><br></br>
-             Phone<input type='phone' value={this.state.value4} placeholder="10 digits" name='phone' onChange={this.handleChange}/><br></br>
+             Phone<input type='text' value={this.state.value4} placeholder="10 digits" name='phone' onChange={this.handleChange}/><br></br>
              Email<input type='email' value={this.state.value5} placeholder='Enter Email address eg:-abc@xyz.com'name='email' onChange={this.handleChange}/><br></br>
              License ID<input type='text' value={this.state.value6} placeholder='Enter valid ID' name='licid'  onChange={this.handleChange}/><br></br>
              License Issued On<input type='date' name='loc'value={this.state.value7}  onChange={this.handleChange}/><br></br>
-             House No<input type='number'value={this.state.value8} placeholder='house number' name='hno'  onChange={this.handleChange}/><br></br>
+             House No<input type='text'value={this.state.value8} placeholder='house number' name='hno'  onChange={this.handleChange}/><br></br>
              Street/Apt<input type='text' value={this.state.value9} placeholder='street' name='street'  onChange={this.handleChange}/><br></br>
              Area<input type='text' value={this.state.value10} placeholder='Area name' name='Area'  onChange={this.handleChange}/><br></br>
              NearestPO<input type='text' value={this.state.value11} placeholer='PO location' name='PO'  onChange={this.handleChange}/><br></br>
-             Pincode<input type='number' value={this.state.value12} placeholder='pin number' name='pin'  onChange={this.handleChange}/><br></br>
-            </form>
+             Pincode<input type='text' value={this.state.value12} placeholder='pin number' name='pin'  onChange={this.handleChange}/><br></br>
+            <input type='submit' value='submit' />
+             </form>
             
             
             </div>
