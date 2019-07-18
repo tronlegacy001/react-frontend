@@ -1,8 +1,7 @@
 #reg
 {
-    text-align: justify;
-    align-content: center;
-    text-align: justify;
+    /*align-content: justify;
+    text-align: justify;*/
     line-height: 40px;
 }
 #start{
@@ -10,4 +9,12 @@
     background-color:green;
     size: 30px;
     text-align: center;
+}
+#marq{
+    font-style: oblique;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:red;
+}
+#w{
+    margin-left: 5000px;
 }

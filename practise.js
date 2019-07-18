@@ -14,10 +14,18 @@ class prac extends React.Component
     
     handleSubmit(event)
     {
-        if (this.state.value1 === '' || this.state.value2 === ''|| this.state.value3 === ''|| this.state.value4 === ''|| this.state.value5 === ''|| this.state.value6 === ''|| this.state.value7 === ''|| this.state.value8 === '' ||this.state.value9 ==='')
+        if (this.state.value1 === '' || this.state.value2 === ''|| this.state.value3 === ''|| this.state.value4 === ''|| this.state.value5 === ''|| this.state.value6 === ''|| this.state.value7 === ''|| this.state.value8 === '' ||this.state.value9 ===''||this.state.value9 ==='')
         {alert('one of the details  is left blank');
         event.preventDefault();}
-        else if()
+        else if(isNaN(parseInt(this.state.value4))&&this.state.value4.length===10)
+        {
+
+        }
+        else if(isNaN(parseInt(this.state.value6)))
+        {
+
+        }
+        else if(isNaN(parseInt(this.state.value12))&&this.state.value12.length===6)
         {
 
         }
@@ -67,7 +75,9 @@ class prac extends React.Component
     render()
     {
         return(
-            <div id='reg'>
+           <div id='reg'>
+            <h1 id='start'>Traffic Management System</h1>
+            <marquee id='marq'>Welcome to xxx</marquee>
             <form onSubmit={this.handleSubmit} name='regform' method='POST'>
              First name<input type='text' value={this.state.value1} placeholder='Enter first name' name='fname' onChange={this.handleChange}/><br></br>
              Last name<input type='text' value={this.state.value2} placeholder='Enter last name' name='lname' onChange={this.handleChange}/><br></br>
@@ -81,6 +91,8 @@ class prac extends React.Component
              Area<input type='text' value={this.state.value10} placeholder='Area name' name='Area'  onChange={this.handleChange}/><br></br>
              NearestPO<input type='text' value={this.state.value11} placeholer='PO location' name='PO'  onChange={this.handleChange}/><br></br>
              Pincode<input type='text' value={this.state.value12} placeholder='pin number' name='pin'  onChange={this.handleChange}/><br></br>
+             Enter password<input type='password' value={this.state.value13} placeholder='Enter pasword' name='pass1' onChange={this.handleChange}/><br></br>
+             Re-Enter password<input type='password' value={this.state.value14} placeholder='Re-Enter pasword' name='pass2' onChange={this.handleChange}/><br></br>
             <input type='submit' value='submit' />
              </form>
             
